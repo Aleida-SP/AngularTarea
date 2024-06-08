@@ -1,0 +1,44 @@
+<div class="contenido my-5">
+    <h2 class="my-5 titulo">SABOR DEL ALMA</h2>
+    <div class="row">
+        <div class="col-6">
+            <img src="../../../assets/images/restaurante.jpg" class="img-fluid">
+        </div>
+        <div class="col-6">
+            <p>
+                Bienvenidos a <strong>Restaurante El Sabor del Alma</strong>, donde la pasión por la cocina se combina con la tradición y la innovación. Ubicados en el corazón de la ciudad, ofrecemos una experiencia culinaria única que celebra lo mejor de la gastronomía local e internacional. Nuestros chefs, con años de experiencia y dedicación, preparan cada plato con ingredientes frescos y de alta calidad, asegurando que cada bocado sea una delicia. Ya sea que busques un almuerzo casual, una cena romántica o un lugar para celebrar ocasiones especiales, nuestro acogedor ambiente y servicio excepcional harán de tu visita una experiencia inolvidable. ¡Ven y déjate sorprender por los sabores que ofrecemos!
+            </p>            
+        </div>
+    </div>
+</div>
+
+<section>
+    <div class="row">
+      <div class="col-6">
+        <form>
+          <label><input type="radio" name="menu" (change)="contar('Sopa de Mani')"> Sopa de Mani</label><br>
+          <label><input type="radio" name="menu" (change)="contar('Pique Macho')"> Pique Macho</label><br>
+          <label><input type="radio" name="menu" (change)="contar('Silpancho')"> Silpancho</label><br>
+          <label><input type="radio" name="menu" (change)="contar('Sajta')"> Sajta</label><br>
+        </form>
+      </div>
+      <div class="col-6">
+        <table>
+          <thead>
+            <tr>
+              <th>Plato</th>
+              <th class="cant">Cantidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let plato of platos">
+              <td>{{ plato.nom }}</td>
+              <td class="cant">{{ plato.cantidad }}</td>
+            </tr>
+          </tbody>
+        </table>
+        
+      </div>
+    </div>
+  </section>
+  
